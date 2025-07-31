@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrei Construction Consulting</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      margin: 60px auto;
+      max-width: 800px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .lang-toggle button {
+      padding: 8px 12px;
+      margin-left: 5px;
+      font-size: 14px;
+      border: none;
+      background: #007acc;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .lang-toggle button:hover {
+      background: #005f99;
+    }
+    .content {
+      display: none;
+    }
+    h1 {
+      color: #333333;
+      margin-bottom: 16px;
+    }
+    p {
+      color: #555555;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .contact {
+      margin-top: 30px;
+      padding: 20px;
+      background: #e7f3ff;
+      border-left: 5px solid #007acc;
+      border-radius: 8px;
+    }
+    .contact p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button onclick="toggleLang('en')">English</button>
+      <button onclick="toggleLang('ru')">Русский</button>
+    </div>
+
+    <div class="content en">
+      <h1>Construction Consulting Services</h1>
+      <p>Professional guidance for homeowners and builders. Services include feasibility reviews, value engineering, and permitting support.</p>
+      <p>Schedule a Zoom consultation or download helpful templates and guides.</p>
+      <div class="contact">
+        <p><strong>Contact:</strong></p>
+        <p>Email: andrei.consulting@email.com</p>
+        <p>Phone: (760) 555-1234</p>
+      </div>
+    </div>
+
+    <div class="content ru">
+      <h1>Консультации по строительству</h1>
+      <p>Профессиональная помощь для домовладельцев и строителей: оценка осуществимости, оптимизация затрат, поддержка по разрешениям.</p>
+      <p>Запишитесь на Zoom-консультацию или скачайте полезные шаблоны и руководства.</p>
+      <div class="contact">
+        <p><strong>Контакты:</strong></p>
+        <p>Email: andrei.consulting@email.com</p>
+        <p>Телефон: (760) 555-1234</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleLang(lang) {
+      document.querySelector('.en').style.display = lang === 'en' ? 'block' : 'none';
+      document.querySelector('.ru').style.display = lang === 'ru' ? 'block' : 'none';
+    }
+    toggleLang('en');
+  </script>
+</body>
+</html>
