@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrei Consulting</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .lang-toggle { margin-bottom: 20px; }
+        .ru { display: none; }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button onclick="toggleLang('en')">English</button>
+        <button onclick="toggleLang('ru')">Русский</button>
+    </div>
+    <div class="content en">
+        <h1>Construction Consulting Services</h1>
+        <p>Professional guidance for homeowners and builders. Services include feasibility reviews, value engineering, and permitting support.</p>
+        <p>Schedule a Zoom consultation or download helpful templates and guides.</p>
+    </div>
+    <div class="content ru">
+        <h1>Консультации по строительству</h1>
+        <p>Профессиональная помощь для домовладельцев и строителей: оценка осуществимости, оптимизация затрат, поддержка по разрешениям.</p>
+        <p>Запишитесь на Zoom-консультацию или скачайте полезные шаблоны и руководства.</p>
+    </div>
+    <script>
+        function toggleLang(lang) {
+            document.querySelector('.en').style.display = lang === 'en' ? 'block' : 'none';
+            document.querySelector('.ru').style.display = lang === 'ru' ? 'block' : 'none';
+        }
+        toggleLang('en');  // default to English
+    </script>
+</body>
+</html>
